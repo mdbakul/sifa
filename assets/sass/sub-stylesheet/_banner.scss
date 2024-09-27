@@ -1,0 +1,83 @@
+.banner{  
+  @extend %p-rel;      
+  &__content {
+    @extend %p-rel, %hidden; 
+    @include padding(150px 0);
+
+    @include breakpoint(xl){
+      @include padding(200px 0);
+    }
+    h3 {                  
+      @extend %white-color;
+      line-height: 1.2 !important;            
+      @include margin-bottom(15px);
+      @include transform(translateY(-900px));            
+      @include transition(2.5s);
+      @include font-size(50px);
+
+      @include breakpoint(xl){
+        @include font-size(65px);
+      }      
+    }         
+    p {        
+      @extend %white-color;
+      @include transform(translateY(-900px));           
+      @include transition(2.5s);
+    }
+    .bannerbtn {
+      @extend %flex, %align-items-center;
+      @include margin-top(40px);  
+      @include transition(2.5s);             
+      @include transform(translateY(-900px));
+      gap: 15px;
+
+      @include breakpoint(sm) {
+        gap: 30px;
+      }      
+      a { 
+        @extend %text-600; 
+        padding: 0 50px;             
+      }
+    }     
+  }       
+  
+  .swiper-slide-active {
+    .banner__content { 
+      h3 {
+        @include transform(translateY(0px));
+                        
+      }
+      p {
+        @include transform(translateY(0px));
+                      
+      }
+      .bannerbtn {
+        @include transform(translateY(0px));
+                        
+      }
+    }   
+    
+  } 
+
+  &--bannertwo{
+    @extend %bgtransprant-im;
+    &::after{
+      @extend %bgtransprant-im;
+    }
+  }
+}
+
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff; 
+    @include add-prefix(border-radius, 50%);  
+    @extend %bgtransprant, %opacity-1;
+}
+
+.swiper-pagination-bullet-active {
+  border: transparent;
+  @extend %bg-theme;
+  color: red;
+}

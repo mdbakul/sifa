@@ -1,0 +1,84 @@
+.pricing3{
+    &__inner{
+      @extend %p-rel, %border-radius-4, %hidden;
+      .thumb{
+        @include padding(110px 0);
+        @extend %text-center;
+        @extend %p-rel;                      
+        &::after{
+          @extend %abs, %top-0, %left-0, %w-100,%h-100;
+          background-image: url("..//..//..//img/home-3/price/img1.jpg");
+          z-index: -1;               
+          background-repeat: no-repeat !important;
+          background-position: center;
+          background-size: 100%;
+        }
+        .pricebtn{
+          @extend %d-block, %border-radius-4;
+          @extend %abs,%left-50;
+          box-shadow: 0px 4px 4px 0px rgba(234, 211, 211, 0.25);
+          bottom: -25px;
+          width: 210px;
+          transform: translateX(-50%);
+          @include padding(8px 11px);
+          @include breakpoint(xxl){
+            @include padding(8px 15px);
+          }
+          z-index: 1;
+          h4{
+            @extend %text-color;
+            sub{
+              @extend %text-400;
+              @include font-size(16px);
+              color: #70717B;
+            }
+          }
+        }
+        
+      }    
+      .content{      
+        @include padding(70px 10px 40px 10px);      
+        @include breakpoint(xl){
+          @include padding(70px 40px 50px 40px);
+        }
+        .text{
+          @extend %flex, %justify-center;
+          ul{
+            @extend %flex, %pl-0;
+            flex-direction: column;
+            gap: 20px;
+            li{
+              @extend %list-none;
+              i{                
+                @extend %mr-5, %text-color;
+              }
+            }
+          }
+        }  
+         .price3btn{
+          @extend %text-center, %mt-15; 
+
+          @include breakpoint(xxl){
+            @include padding(0 80px);
+          }       
+         }   
+      }
+    }
+    .row{
+      .row{
+        .col-lg-6{
+            &:nth-child(2){
+                .pricing3__inner{
+                    &::after{
+                    @extend %abs, %top-0, %left-0, %w-100,%h-100;
+                    background-image: url("..//..//..//img/home-3/price/img2.jpg");
+                    z-index: -1;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    }
+                } 
+            }           
+        }
+      }
+    }
+}

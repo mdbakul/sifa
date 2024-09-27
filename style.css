@@ -1,0 +1,63 @@
+/*!
+Theme Name: sifa
+Author:Ayurved Research Foundation 
+Author URI: https://sifa.com
+Description: Sifa - Banking and Finance WordPress Theme 
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: sifa
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+.tp-black-bg{
+	background-color: #16243E;
+}
+
+
+/*woo */
+.star-rating{
+	position: relative;
+	display: inline-block;
+}
+.star-rating span {
+	position: absolute;
+	top: -4px;
+	left: 0;
+	overflow: hidden;
+	font-size: 0px;
+}
+.star-rating::before {
+	font-family: "Font Awesome 6 Pro";
+	content: "\f005 \f005 \f005 \f005 \f005";
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #d9d9ea;
+	font-size: 11px;
+
+}
+.star-rating span::before {
+	font-family: "Font Awesome 6 Pro";
+	content: "\f005 \f005 \f005 \f005 \f005";
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #ffbf14;
+	font-weight: 900;
+	display: inline-block;
+	font-size: 11px;
+}
+
+
+ol.flex-control-nav.flex-control-thumbs {
+	display: flex;
+}
+
+ol.flex-control-nav.flex-control-thumbs li{
+	width: 117.4px;	
+}
+
+ol.flex-control-nav.flex-control-thumbs li img{
+
+}

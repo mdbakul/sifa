@@ -1,0 +1,88 @@
+.feedback{
+    @extend %p-rel;
+    &::after{
+        @extend %abs, %top-0,%left-0,%h-100;
+        @extend %bg-no-repeat, %bg-cover;
+        @include breakpoint(xl){
+            background-image: url("..//..//..//img/home-3/feedback/bg.jpg");
+            background-position: center;
+            width:48%;
+        }        
+        @include breakpoint(xxl){
+         width:50%;
+        }
+    }    
+    &__header{
+        @include margin-bottom(60px);
+        p{
+            @extend %mt-10;
+        }
+    }
+    &__item{
+        @extend %flex; 
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__inner {
+        @include padding(30px 30px 20px 30px);
+        @include border-radius(5px);
+        background: url("..//..//..//img/home-3/feedback/final.gif");
+        @extend %bg-no-repeat;
+        .top{
+            @extend %flex,        
+            %align-items-center;
+            gap: 30px;
+
+        .thumb{
+            @extend %wh-80,
+            %hd-80,
+            %bg-white,
+            %white-color;
+            @include border-radius(50px);
+            img {
+                @extend %w-100;
+            }            
+        }  
+        .profile {
+            width: calc(100% - 110px);
+            @extend %flex,            
+            %justify-between;
+            @include margin-top(20px);
+            .name {
+                h6 {
+                    @extend %mb-0
+                }    
+                span {
+                    @extend %text-400;
+                }
+            }            
+        }
+        } 
+        .bottom{
+            @include margin-top(20px);
+            p{
+                @extend %flex, %my-5;
+                span{
+                    width: 30%;
+                }
+                &.first{
+                    color: red;
+                    span{
+                      color: red; 
+                    } 
+                }
+            }
+        }
+    } 
+    .row{
+        @include breakpoint(xl){
+            @include margin-left(70px);            
+        }
+        @include breakpoint(max-xl){
+            flex-direction: column-reverse;
+        }
+    }     
+    &__blood-donatebtn{
+        @extend %text-center, %mt-20;        
+    }
+}
